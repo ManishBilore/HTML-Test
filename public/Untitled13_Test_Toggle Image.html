@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Toggle</title>
+    <h1>Toggle Between Kittens</h1>
+</head>
+<body>
+    <button onclick="toggleKitten()">Click to change</button>
+    <br>
+    <img src="https://picsum.photos/300" alt="lorem_picsum" id="image01"/>
+
+    <script>
+
+        const image_src_01 = "https://images.pexels.com/photos/416160/pexels-photo-416160.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1";
+        const image_src_02 = "https://images.pexels.com/photos/45201/kitty-cat-kitten-pet-45201.jpeg?auto=compress&cs=tinysrgb&w=600";
+
+        function toggleKitten() {
+
+            const img = document.getElementById('image01')
+
+            if (img.src.includes(image_src_01)) {
+                img.src = image_src_02;
+                img.alt = 'kitten 02';
+            } else {
+                img.src = image_src_01;
+                img.alt = 'kitten 01';
+            }
+        }
+    </script>
+    
+</body>
+</html>
